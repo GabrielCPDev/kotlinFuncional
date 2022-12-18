@@ -1,11 +1,20 @@
 fun main() {
-    val minhaFuncao: (a: Int, b: Int) -> Unit = ::teste
+    testaTipoFuncaoReferencia()
 
-    println(minhaFuncao(2, 3))
+    testaTipoFuncaoClasse()
+}
 
+fun testaTipoFuncaoClasse() {
     val minhaFuncaoClasse = TesteClasse()
     println(minhaFuncaoClasse())
 }
+
+fun testaTipoFuncaoReferencia() {
+    val minhaFuncao: (a: Int, b: Int) -> Unit = ::teste
+
+    println(minhaFuncao(2, 3))
+}
+
 fun teste(a:Int?= 0, b: Int? = 0){
     println("executa teste! ${a!! + b!!}")
 }
