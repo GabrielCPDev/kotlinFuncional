@@ -1,7 +1,13 @@
 fun main() {
     testaTipoFuncaoReferencia()
-
     testaTipoFuncaoClasse()
+
+    val minhaFuncaoLambda : () -> Unit = { println("minha funcao lambda") }
+
+    println(minhaFuncaoLambda())
+
+    val minhaFuncaoAnonima: () -> Unit = fun () {  println("minha funcao anonima") }
+    println(minhaFuncaoAnonima())
 }
 
 fun testaTipoFuncaoClasse() {
